@@ -1,0 +1,37 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit !important;
+}
+.gear-startup {
+  padding: 0;
+  margin: 0;
+  width: 50px;
+}
+#gear-01 {
+  transform: rotate(28deg) translateX(0.5em);
+  animation: 2s infinite linear gear-rolling;
+}
+#gear-02 {
+  animation: 2s infinite linear gear-backrolling;
+}
+
+@keyframes gear-rolling {
+  from {
+    transform: rotate(28deg);
+  }
+  to {
+    transform: rotate(208deg);
+  }
+}
+@keyframes gear-backrolling {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-180deg);
+  }
+}

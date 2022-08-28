@@ -1,0 +1,85 @@
+/* @import url('https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css'); */
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+/* center content and appearance; */
+section {
+  font-family: sans-serif;
+  font-size: 2em;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  height: 4em;
+  color: white;
+  backdrop-filter: brightness(150%);
+  box-shadow: 0 5px 5px #555;
+}
+
+/* .scrollup { */
+/* animation: name duration timing-function delay iteration-count direction fill-mode; */
+/* transform: translateY(-10em); */
+/* animation: slide 1s ease-in-out 0 1 normal forwards; */
+/* transition: transform 1s ease; */
+/* } */
+
+.slide-in {
+  animation: slide-in 0.5s forwards;
+}
+
+.slide-out {
+  animation: slide-out 0.5s forwards;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.navbar {
+  position: sticky;
+  z-index: 3;
+  top: 0;
+}
+
+.container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.page {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+.page:nth-of-type(2n + 1) {
+  background-color: purple;
+}
+
+.page:nth-of-type(2n) {
+  background-color: blue;
+}
+
+.page:nth-of-type(3n) {
+  background-color: re;
+}
